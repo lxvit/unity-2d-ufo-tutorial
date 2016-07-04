@@ -1,0 +1,219 @@
+fileFormatVersion: 2
+guid: 3ea02691a95a20344a7599cd2508d2c5
+timeCreated: 1467666393
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Sand
+    21300002: Water
+    21300004: Ice
+    21300006: Metal
+    21300008: Bush
+    21300010: Wind tube
+    21300012: Fire
+    21300014: Brick wall
+    21300016: Magnet wall
+    21300018: Net
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: 0
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: Sand
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 666
+        width: 500
+        height: 500
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -166.28442, y: 167.84674}
+        - {x: -166.28442, y: -166.15326}
+        - {x: 166.71558, y: -166.15326}
+        - {x: 166.71558, y: 167.84674}
+    - name: Water
+      rect:
+        serializedVersion: 2
+        x: 678
+        y: 666
+        width: 500
+        height: 500
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -166.17404, y: 167.84674}
+        - {x: -166.17404, y: -166.15326}
+        - {x: 167.82596, y: -166.15326}
+        - {x: 167.82596, y: 167.84674}
+    - name: Ice
+      rect:
+        serializedVersion: 2
+        x: 1289
+        y: 666
+        width: 500
+        height: 500
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -166.39874, y: 167.84674}
+        - {x: -166.39874, y: -166.15326}
+        - {x: 166.60126, y: -166.15326}
+        - {x: 166.60126, y: 167.84674}
+    - name: Metal
+      rect:
+        serializedVersion: 2
+        x: 1901
+        y: 666
+        width: 500
+        height: 500
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -166.4585, y: 167.84674}
+        - {x: -166.4585, y: -166.15326}
+        - {x: 166.5415, y: -166.15326}
+        - {x: 166.5415, y: 167.84674}
+    - name: Bush
+      rect:
+        serializedVersion: 2
+        x: 2512
+        y: 666
+        width: 500
+        height: 500
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -166.1831, y: 167.84674}
+        - {x: -166.1831, y: -166.15326}
+        - {x: 166.8169, y: -166.15326}
+        - {x: 166.8169, y: 167.84674}
+    - name: Wind tube
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 74
+        width: 500
+        height: 500
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -166.28442, y: 166.7052}
+        - {x: -166.28442, y: -166.2948}
+        - {x: 166.71558, y: -166.2948}
+        - {x: 166.71558, y: 166.7052}
+    - name: Fire
+      rect:
+        serializedVersion: 2
+        x: 678
+        y: 74
+        width: 500
+        height: 500
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -166.17404, y: 166.7052}
+        - {x: -166.17404, y: -166.2948}
+        - {x: 167.82596, y: -166.2948}
+        - {x: 167.82596, y: 166.7052}
+    - name: Brick wall
+      rect:
+        serializedVersion: 2
+        x: 1289
+        y: 74
+        width: 500
+        height: 500
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -166.39874, y: 166.7052}
+        - {x: -166.39874, y: -166.2948}
+        - {x: 166.60126, y: -166.2948}
+        - {x: 166.60126, y: 166.7052}
+    - name: Magnet wall
+      rect:
+        serializedVersion: 2
+        x: 1889
+        y: 63
+        width: 500
+        height: 500
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 165.56226, y: -166.1091}
+        - {x: 166.56226, y: -165.1091}
+        - {x: 166.56226, y: 167.8909}
+        - {x: -162.43774, y: 167.8909}
+        - {x: -166.43774, y: 163.8909}
+        - {x: -166.43774, y: -166.1091}
+    - name: Net
+      rect:
+        serializedVersion: 2
+        x: 2512
+        y: 74
+        width: 500
+        height: 500
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -166.1831, y: 166.7052}
+        - {x: -166.1831, y: -166.2948}
+        - {x: 166.8169, y: -166.2948}
+        - {x: 166.8169, y: 166.7052}
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
