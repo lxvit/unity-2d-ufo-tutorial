@@ -12,8 +12,13 @@ public class OverlayController : MonoBehaviour {
     private Text overlayTitle;
     private Text currentTimerText;
     private Text bestTimeText;
+    private Text hpText;
+    private Text scoretText;
+    private Text timerText;
+    private GameObject overlay;
+    private Scene currentScene;
 
-    void Awake () {
+    void Start () {
         nextLevelButton = GameObject.Find("NextLevelButton").GetComponent<Button>();
         restartLevelButton = GameObject.Find("RestartButton").GetComponent<Button>();
         returnToMenuButton = GameObject.Find("ReturnToMenuButton").GetComponent<Button>();
@@ -21,8 +26,12 @@ public class OverlayController : MonoBehaviour {
         overlayTitle = GameObject.Find("OverlayTitleText").GetComponent<Text>();
         currentTimerText = GameObject.Find("CurrentTimerText").GetComponent<Text>();
         bestTimeText = GameObject.Find("RecordText").GetComponent<Text>();
+        hpText = GameObject.Find("HpText").GetComponent<Text>();
+        scoretText = GameObject.Find("ScoreText").GetComponent<Text>();
+        timerText = GameObject.Find("TimerText").GetComponent<Text>();
+        overlay = GameObject.Find("InGameOverlay");
 
-        Scene currentScene = SceneManager.GetActiveScene();
+        currentScene = SceneManager.GetActiveScene();
         float currentRecord = PlayerPrefs.GetFloat("BestTime" + currentScene.buildIndex);
         if (currentRecord > 0)
             bestTimeText.text = "Best Time: " + currentRecord.ToString("F2");
@@ -38,14 +47,48 @@ public class OverlayController : MonoBehaviour {
         returnToMenuButton.onClick.AddListener(delegate () {
             sceneLoader.ReturnToMenu();
         });
+
+        UpdateTexts();
+        GameVariables.currentState = GameVariables.StateType.PLAYING;
     }
 
-    public void ShowOverlay(string title, bool allowNextLevel, float timeEllpased)
+    void OnGUI()
+    {
+        UpdateTexts();
+    }
+
+    private void UpdateTexts()
+    {
+        timerText.text = GameVariables.currentTime.ToString("F2");
+        hpText.text = "HP: " + GameVariables.currentHp.ToString();
+        scoretText.text = "Pickups: " + GameVariables.currentPickups.ToString() + "/" + GameVariables.totalPickups;
+        switch (GameVariables.currentState)
+        {
+            case GameVariables.StateType.PLAYING:
+                HideOverlay();
+                break;
+            case GameVariables.StateType.PAUSE:
+                ShowOverlay("Pause", false);
+                break;
+            case GameVariables.StateType.WIN:
+                ShowOverlay("You win!", true);
+                break;
+            case GameVariables.StateType.LOST:
+                ShowOverlay("You Lose!", false);
+                break;
+            default:
+                HideOverlay();
+                break;
+        }
+    }
+
+    public void ShowOverlay(string title, bool allowNextLevel)
     {
         overlayTitle.text = title;
         Time.timeScale = 0;
-        currentTimerText.text = "Current Time: " + timeEllpased.ToString("F2");
-        gameObject.SetActive(true);
+        currentTimerText.text = "Current Time: " + GameVariables.currentTime.ToString("F2");
+        bestTimeText.text = "Best Time: " + PlayerPrefs.GetFloat("BestTime" + currentScene.buildIndex).ToString("F2");
+        overlay.SetActive(true);
         if (!allowNextLevel || ((sceneLoader.currentScene.buildIndex + 1) > (sceneLoader.totalScenes - 1)))
         {
             nextLevelButton.gameObject.SetActive(false);
@@ -56,6 +99,6 @@ public class OverlayController : MonoBehaviour {
     {
         Time.timeScale = 1;
         nextLevelButton.gameObject.SetActive(true);
-        gameObject.SetActive(false);
+        overlay.SetActive(false);
     }
 }

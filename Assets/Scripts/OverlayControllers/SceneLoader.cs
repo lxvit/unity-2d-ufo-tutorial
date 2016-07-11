@@ -15,6 +15,14 @@ public class SceneLoader : MonoBehaviour {
         totalScenes = SceneManager.sceneCountInBuildSettings;
     }
 
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            RestartLevel();
+        }
+    }
+
     public void LoadLevel(string sceneName)
     {
         loadingImage.SetActive(true);
